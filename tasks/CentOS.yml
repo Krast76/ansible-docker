@@ -1,0 +1,13 @@
+---
+- name: "Add Docker repository"
+  get_url:
+   url: "https://download.docker.com/linux/centos/{{ docker_package_type }}.repo"
+   dest: /etc/yum.repos.d/docker.repo
+   mode: 0644
+   force: yes
+
+- name: "Install Docker"
+  yum:
+   name: "{{ docker_package_type }}"
+   state: present
+   update_cache: yes

@@ -1,0 +1,30 @@
+---
+
+- name: "Include {{ ansible_distribution }} File"
+  include: "{{ansible_distribution }}.yml"
+
+- name: "Ensure docker service is started"
+  service:
+   name: docker
+   state: started
+   enabled: yes
+
+- name: "test hello-world"
+  command: docker run hello-world
+  register: helloworld
+  changed_when: False
+  ignore_errors: yes
+  
+
+- name: "Test docker work"
+  assert:
+   that:
+    - "'Hello from Docker!' in  helloworld.stdout"
+
+- name: "Include docker-machine.yml"
+  include: docker-machine.yml
+  when: docker_machine == True
+
+- name: "Include docker-compose.yml"
+  include: docker-compose.yml
+  when: docker_machine == True
