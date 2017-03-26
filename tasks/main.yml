@@ -27,4 +27,4 @@
 
 - name: "Include docker-compose.yml"
   include: docker-compose.yml
-  when: docker_machine == True
+  when: docker_compose == True
