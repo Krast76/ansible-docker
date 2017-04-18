@@ -1,6 +1,5 @@
 ---
-
-- name: "Include {{ ansible_distribution }} File"
+- name: "Include {{ ansible_distribution }} specific tasks"
   include: "{{ansible_distribution }}.yml"
 
 - name: "Ensure docker service is started"
@@ -9,14 +8,13 @@
    state: started
    enabled: yes
 
-- name: "test hello-world"
+- name: "Run hello-world container"
   command: docker run hello-world
   register: helloworld
   changed_when: False
   ignore_errors: yes
-  
 
-- name: "Test docker work"
+- name: "Check hello-world container ran correctly"
   assert:
    that:
     - "'Hello from Docker!' in  helloworld.stdout"

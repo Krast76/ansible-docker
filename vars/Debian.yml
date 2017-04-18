@@ -1,0 +1,7 @@
+---
+docker_gpg_url: "https://download.docker.com/linux/debian/gpg"
+
+docker_common_packages:
+   - apt-transport-https
+   - ca-certificates
+   - curl
