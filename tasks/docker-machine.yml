@@ -1,7 +1,7 @@
 ---
 - name: "Get docker-machine"
   get_url:
-   url: "https://github.com/docker/machine/releases/download/v0.10.0/docker-machine-{{ ansible_system }}-{{ ansible_machine }}"
+   url: "https://github.com/docker/machine/releases/download/v{{ docker_machine_version }}/docker-machine-{{ ansible_system }}-{{ ansible_machine }}"
    dest: /usr/local/bin/docker-machine
    mode: 0740
 
