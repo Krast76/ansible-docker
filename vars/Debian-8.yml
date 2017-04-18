@@ -1,0 +1,4 @@
+---
+docker_extra_packages:
+   - python-software-properties
+
