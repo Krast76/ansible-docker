@@ -4,5 +4,5 @@ docker_gpg_url: "https://download.docker.com/linux/debian/gpg"
 docker_machine: False
 docker_machine_version: 0.10.0
 docker_compose: False
-docker_compose_version: 1.12.0
+docker_compose_version: 1.18.0
 
