@@ -1,5 +1,4 @@
 # Docker role
-# SUBMODULE TEST
 
 ## Features
 
@@ -8,10 +7,6 @@ Install docker-engine from official Docker Inc's repository
 ## Source
 
 Based on [Krast76's role](https://github.com/Krast76/ansible-docker)
-
-## Limitations
-
-At the moment roles is tested only on CentOS 7 and Debian 8
 
 ## Variables
 
