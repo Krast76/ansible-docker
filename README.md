@@ -30,6 +30,12 @@ Available variables are listed below, along with default values (see defaults/ma
     docker_compose: False
     docker_compose_version: 1.12.0
 
+* Docker unsecure registry (only for registry without TLS/SSL) :
+
+    docker_insecure_registry:
+      - myregistry:5000
+      - mybetterregistry:4000
+
 ## Example playbook
 
 ```
