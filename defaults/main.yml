@@ -5,4 +5,5 @@ docker_machine: False
 docker_machine_version: 0.10.0
 docker_compose: False
 docker_compose_version: 1.18.0
+docker_insecure_registry: []
 

@@ -8,6 +8,8 @@
    state: started
    enabled: yes
 
+- include: config.yml
+
 - name: "Run hello-world container"
   command: docker run hello-world
   register: helloworld

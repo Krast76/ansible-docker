@@ -1,0 +1,5 @@
+- name: "Configure daemon.json"
+  template:
+    src: daemon.json.j2
+    dest: /etc/docker/daemon.json
+  notify: "Restart Docker"
