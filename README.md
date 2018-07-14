@@ -36,6 +36,14 @@ Available variables are listed below, along with default values (see defaults/ma
       - myregistry:5000
       - mybetterregistry:4000
 
+* Docker live-migration (keep containers running when docker daemon restart) :
+
+    docker_live_restore: True
+
+* Allow docker to manage iptables rules :
+
+    docker_manage_iptables: True
+
 ## Example playbook
 
 ```
