@@ -1,6 +1,6 @@
 ---
 - name: "Include {{ ansible_distribution }} specific tasks"
-  include: "{{ansible_distribution }}.yml"
+  include_tasks: "{{ansible_distribution }}.yml"
 
 - name: "Ensure docker service is started"
   service:
@@ -8,12 +8,12 @@
    state: started
    enabled: yes
 
-- include: config.yml
+- include_tasks: config.yml
 
 - name: "Include docker-machine.yml"
-  include: docker-machine.yml
+  include_tasks: docker-machine.yml
   when: docker_machine == True
 
 - name: "Include docker-compose.yml"
-  include: docker-compose.yml
+  include_tasks: docker-compose.yml
   when: docker_compose == True
