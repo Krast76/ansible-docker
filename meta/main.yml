@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: "ansible-docker"
+  author: "Ludovic Logiou"
+  min_ansible_version: 2.12
+  platforms:
+    - name: Ubuntu
+      versions:
+        - jammy
