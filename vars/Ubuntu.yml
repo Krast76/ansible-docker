@@ -1,0 +1,15 @@
+---
+
+docker_gpg_url: "https://download.docker.com/linux/ubuntu/gpg"
+packages: "{{ docker_common_packages + docker_packages }}"
+
+docker_common_packages:
+  - ca-certificates
+  - curl
+  - gnupg
+  - lsb-release
+
+docker_packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io

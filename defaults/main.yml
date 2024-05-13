@@ -8,4 +8,4 @@ docker_compose_version: 1.27.4
 docker_insecure_registry: []
 docker_live_restore: False
 docker_manage_iptables: True
-
+docker_extra_packages: []
