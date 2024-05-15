@@ -9,3 +9,7 @@ docker_insecure_registry: []
 docker_live_restore: False
 docker_manage_iptables: True
 docker_extra_packages: []
+#docker_runtimes:
+#  nvidia:
+#    args: []
+#    path: "nvidia-container-runtime"
