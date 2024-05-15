@@ -4,8 +4,6 @@
 {% endif %}
 "live-restore": {{ docker_live_restore | lower }},
 "iptables": {{ docker_manage_iptables | lower }}{% if docker_runtimes is defined %},
-"runtimes": {
-{{ docker_runtimes | to_json }}
-}
+"runtimes": {{ docker_runtimes | to_json(indent=4, sort_keys=True) }}
 {% endif %}
 }
