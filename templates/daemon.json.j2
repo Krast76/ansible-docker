@@ -3,7 +3,7 @@
    "insecure-registries": [{% for registry in docker_insecure_registry %}"{{ registry }}"{% if not loop.last %},{% endif %}{% endfor %}]
 {% endif %}
 "live-restore": {{ docker_live_restore | lower }},
-{% if docker_mtu is defined %}{{ docker_mtu }},{% endif %}
+{% if docker_mtu is defined %}"mtu":{{ docker_mtu }},{% endif %}
 "iptables": {{ docker_manage_iptables | lower }}{% if docker_runtimes is defined %},
 "runtimes": {{ docker_runtimes | to_json(indent=4, sort_keys=True) }}
 {% endif %}
