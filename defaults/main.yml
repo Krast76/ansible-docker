@@ -13,3 +13,4 @@ docker_extra_packages: []
 #  nvidia:
 #    args: []
 #    path: "nvidia-container-runtime"
+#docker_mtu: 1442
